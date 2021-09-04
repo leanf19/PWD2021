@@ -1,5 +1,5 @@
 <?php
-if ($_GET) {
+if ($_GET['numero'] != "") {
     $num = $_GET['numero'];
     if ($num == 0) {
         $res = "cero";
