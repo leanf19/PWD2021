@@ -22,7 +22,7 @@ if ($_POST) {
     <?php
     echo "<h3 class='h3'>{$respuesta}</h3>"
     ?>
-    <button class="btn btn-primary bg-dark" type="button"><a href="Ej1.php">ATRÁS</a></button>
+    <button class="btn btn-primary bg-dark" type="button"><a href="Ej3.php">ATRÁS</a></button>
 </div>
 <?php
 include_once "../Footer.php";
