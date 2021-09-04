@@ -13,7 +13,7 @@ include_once "../Header.php";
 ?>
 
 <div class="container text-center p-4">
-    <form id="formulario1" name="formulario1" method="get" action="../../../Controllers/vernumero.php">
+    <form id="formulario1" name="formulario1" method="get" action="Ej1-res.php">
         <div class="form-group">
             <label>Ingrese un número:</label>
             <input id="numero" name="numero" type="number">
