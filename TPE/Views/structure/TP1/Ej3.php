@@ -17,7 +17,7 @@ include_once "../Header.php";
         <h3 class="h3">Ejercicio 3</h3>
     </div>
     <div class="row d-flex align-content-end flex-wrap">
-        <form id="formulario3" name="formulario3" method="post" action="../../../Controllers/form3.php">
+        <form id="formulario3" name="formulario3" method="post" action="Ej3-res.php">
             <div class="form-group p-2">
                 <label>Nombre</label>
                 <input name="nombre" id="nombre">
