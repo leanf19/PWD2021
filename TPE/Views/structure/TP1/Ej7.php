@@ -13,7 +13,7 @@ include_once "../Header.php";
 ?>
 <div class="container align-content-center p-3">
     <div class="row pb-2">
-        <h3 class="h3">Ejercicio 6</h3>
+        <h3 class="h3">Ejercicio 7</h3>
     </div>
     <div class="row d-flex align-content-end flex-wrap">
         <form id="formulario5" name="formulario5" method="get" action="Ej7-res.php">
