@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <title>TPE - Resultado Ej4</title>
+    <title>TPE - Resultado Ej5</title>
 </head>
 <body>
 <?php
 include_once "../Header.php";
-include_once "../../../Controllers/ej4Controller.php";
+include_once "../../../Controllers/ej5Controller.php";
 
-$controller = new ej4Controller();
-if ($_GET) {
-    $respuesta = $controller->verificarEdad($_GET);
+$controller = new ej5Controller();
+if ($_POST) {
+    $respuesta = $controller->verificarDatos($_POST);
 }
 
 ?>
@@ -22,7 +22,7 @@ if ($_GET) {
     <?php
     echo $respuesta;
     ?>
-    <button class="btn btn-primary bg-dark" type="button"><a href="Ej4.php">ATRÁS</a></button>
+    <button class="btn btn-primary bg-dark" type="button"><a href="Ej5.php">ATRÁS</a></button>
 </div>
 <?php
 include_once "../Footer.php";
