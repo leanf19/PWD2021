@@ -10,10 +10,17 @@
 <body>
 <?php
 include_once "../Header.php";
+include_once "../../../Controllers/verificaPass.php";
+
+$controller = new verificaPass();
+if (!empty($_POST))
+    $resp = $controller->validarLogin($_POST);
 ?>
 
 <div class="container">
-
+    <?
+    echo $resp;
+    ?>
 </div>
 
 

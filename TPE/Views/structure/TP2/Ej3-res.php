@@ -10,7 +10,19 @@
 <body>
 <?php
 include_once "../Header.php";
+include_once "../../../Controllers/verificaPass.php";
+
+$controller = new verificaPass();
+if ($_POST)
+    $resp = $controller->validarLogin($_POST);
 ?>
+
+<div class="container text-center p-5">
+    <?php
+    echo $resp;
+    ?>
+</div>
+
 
 <?php
 include_once "../Footer.php";

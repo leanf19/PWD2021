@@ -17,8 +17,8 @@ include_once "../Header.php";
     <div class="border-2">
         <h2 class="h2 p-3"> Member Login</h2>
         <div>
-            <form class="needs-validation" id="login" name="login" onsubmit="return validacionFormEj3.js" method="post" action="Ej3-res.php"
-                  novalidate>
+            <form id="login" name="login" method="post"
+                  action="Ej3-res.php" onsubmit="return validacion();" novalidate>
                 <div class="form-group">
                     <label></label>
                     <div class="input-group">
@@ -27,8 +27,9 @@ include_once "../Header.php";
                                 <i class="fa fa-user"></i>
                             </div>
                         </div>
-                        <input id="user" name="user" placeholder="Username" type="text" required="required"
-                               class="form-control">
+                        <input id="user" name="user" placeholder="Username" type="text"
+                               class="form-control" required>
+                        <div class="invalid-feedback">Ingrese un usuario</div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -39,7 +40,9 @@ include_once "../Header.php";
                                 <i class="fa fa-lock"></i>
                             </div>
                         </div>
-                        <input id="password" name="password" placeholder="Password" type="text" class="form-control">
+                        <input id="password" name="password" placeholder="Password" type="text" class="form-control"
+                               required>
+                        <div class="invalid-feedback">Ingrese una contraseña</div>
                     </div>
                 </div>
                 <div class="row">
@@ -50,9 +53,9 @@ include_once "../Header.php";
             </form>
         </div>
     </div>
+    <script src="../../js/validacionFormEj3.js" type="application/javascript"></script>
     <?php
     include_once "../Footer.php";
     ?>
-    <script src="../../js/"
 </body>
 </html>
