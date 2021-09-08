@@ -13,10 +13,13 @@ include_once "../Header.php";
 ?>
 
 <div class="container text-center p-4">
-    <form id="formulario1" name="formulario1" method="get" action="../TP1/Ej1-res.php">
+    <form class="needs-validation" id="formulario1" name="formulario1" method="get" action="../TP1/Ej1-res.php"
+          onsubmit="return validarForm();"
+          novalidate>
         <div class="form-group">
             <label>Ingrese un número:</label>
-            <input id="numero" name="numero" type="number">
+            <input id="numero" name="numero" type="number" class="form-control col-5" required>
+            <div class="invalid-feedback">Ingrese un numero</div>
             <button class="btn btn-primary bg-dark" type="submit" value="ENVIAR">ENVIAR</button>
         </div>
     </form>
