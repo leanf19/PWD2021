@@ -6,6 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <title>TPE</title>
+    <script type="text/javascript">
+        function validar() {
+            resp = true;
+            var edad = $('#edad')[0];
+            if (edad.value <=0) {
+                alert("Edad invalida");
+                resp = false;
+            }
+            
+            return resp;
+        }
+    </script>
 </head>
 <body>
 <?php
@@ -18,7 +30,7 @@ include_once "../Header.php";
         <h4 class="h3">Calcule su tarifa</h4>
     </div>
     <div class="row d-flex align-content-end flex-wrap">
-        <form id="formulario5" name="formulario5" method="get" action="Ej8-res.php">
+        <form id="formulario5" name="formulario5" method="get" action="Ej8-res.php" onSubmit="return validar();">
             <div class="form-group p-2">
                 <label for="edad">Edad</label>
                 <input class="form-control-sm" name="edad" id="edad" type="number">
@@ -40,6 +52,7 @@ include_once "../Header.php";
             </div>
 
             <button class="btn btn-primary bg-dark" type="submit">Enviar</button>
+            <button class="btn btn-primary bg-dark" type="reset" >Borrar</button>
         </form>
     </div>
 </div>
