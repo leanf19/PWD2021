@@ -52,7 +52,11 @@ class ej6Controller
                     $texto .= " y tengo estudios secundarios.</h4>";
                     break;
             }
+            if ($cantDeportes>0){
             $texto .= "<h4 class='h4'>Practico $cantDeportes deportes.</h4>";
+            }else{
+                $texto .= "<h4 class='h4'>No practico deportes.</h4>";
+            }
 
         } else {
             $texto = "<h3 class='h3'> No hay datos para visualizar </h3>";

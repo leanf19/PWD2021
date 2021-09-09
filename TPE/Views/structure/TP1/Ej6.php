@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <title>TPE</title>
+    <script src="../../js/validacionFormTP1E6.js" type="application/javascript"></script>
 </head>
 <body>
 <?php
@@ -16,25 +17,28 @@ include_once "../Header.php";
         <h3 class="h3">Ejercicio 6</h3>
     </div>
     <div class="row d-flex align-content-end flex-wrap">
-        <form id="formulario5" name="formulario5" method="get" action="Ej6-res.php">
+        <form id="formulario5" name="formulario5" method="get" action="Ej6-res.php" onsubmit="return validacion();">
             <div class="form-group p-2">
                 <label for="nombre">Nombre</label>
                 <input class="form-control-sm" name="nombre" id="nombre">
+                <div class="invalid-feedback">Ingrese el nombre</div>
             </div>
             <div class="form-group p-2">
                 <label for="apellido">Apellido</label>
                 <input class="form-control-sm" name="apellido" id="apellido">
+                <div class="invalid-feedback">Ingrese el apellido</div>
             </div>
             <div class="form-group p-2">
                 <label for="edad">Edad</label>
                 <input class="form-control-sm" name="edad" id="edad" type="number">
+                <div class="invalid-feedback">Rango de edad invalido</div>
             </div>
             <div class="form-group p-2">
                 <label for="sexo">Sexo</label>
                 <select class="form-control-sm form-select-sm" id="sexo" name="sexo">
                     <option value="f">Femenino</option>
                     <option value="m">Masculino</option>
-                    <option value="x">Binario</option>
+                    <option value="x">No binario</option>
                 </select>
             </div>
             <div>
@@ -60,6 +64,7 @@ include_once "../Header.php";
             <div class="form-group p-2">
                 <label for="direccion">Direccion</label>
                 <input class="form-control-sm" name="direccion" id="direccion">
+                <div class="invalid-feedback">Ingrese una direccion</div>
             </div>
             <div>
                 <label for="deportes">Seleccionar deporte/s que realiza</label>
