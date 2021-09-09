@@ -11,7 +11,7 @@ class cargaArchivoEj1
         $exito = 1;
         $tipo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
         $devolver = [];
-        $tam = $datos['archivo']["size"] / 1024;
+        $tam = $datos['archivo']["size"] / 1048576;
         $texto = '';
 
         // Check de formato
@@ -19,8 +19,10 @@ class cargaArchivoEj1
             $texto = "El archivo ingresado tiene un formato incorrecto.";
             $exito = 0;
         }
+
         // Check de tamaño
         if ($tam > 2) {
+
             $texto = "El archivo supera los 2 MB.";
             $exito = 0;
         }
