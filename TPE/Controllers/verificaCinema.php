@@ -16,15 +16,18 @@ class verificaCinema
         $duracion = $datos['duracion'];
         $edad = $datos['edad'];
 
-        $texto = "<h4 class='h4'>Titulo:{$titulo}</h4><br>";
-        $texto .= "<h4 class='h4'>Actores:{$actores}</h4><br>";
-        $texto .= "<h4 class='h4'>Director:{$director}</h4><br>";
-        $texto .= "<h4 class='h4'>Guión:{$guion}</h4><br>";
-        $texto .= "<h4 class='h4'>Producción:{$produccion}</h4><br>";
-        $texto .= "<h4 class='h4'>Año:{$anio}</h4><br>";
-        $texto .= "<h4 class='h4'>Nacionalidad:{$nacionalidad}</h4><br>";
-        $texto .= "<h4 class='h4'>Genero:{$genero}</h4><br>";
-        $texto .= "<h4 class='h4'>Duración:{$duracion}</h4><br>";
+        $texto = "<div class='alert alert-success p-3' role='alert'>
+  <p class='alert-heading'>Pelicula ingresada correctamente!</p>
+  <hr>";
+        $texto .= "<p class='mb-0'>Titulo:{$titulo}</p><br>";
+        $texto .= "<p class='mb-0'>Actores:{$actores}</p><br>";
+        $texto .= "<p class='mb-0'>Director:{$director}</p><br>";
+        $texto .= "<p class='mb-0'>Guión:{$guion}</p><br>";
+        $texto .= "<p class='mb-0'>Producción:{$produccion}</p><br>";
+        $texto .= "<p class='mb-0'>Año:{$anio}</p><br>";
+        $texto .= "<p class='mb-0'>Nacionalidad:{$nacionalidad}</p><br>";
+        $texto .= "<p class='mb-0'>Genero:{$genero}</p><br>";
+        $texto .= "<p class='mb-0'>Duración:{$duracion}</p><br>";
 
 
         $restriccion = "";
@@ -40,9 +43,8 @@ class verificaCinema
                 break;
         }
 
-        $texto .= "<h4 class='h4'>Restricciones de edad:{$restriccion}</h4><br>";
-
-        //var_dump($texto);
+        $texto .= "<p class='mb-0'>Restricciones de edad:{$restriccion}</p><br>";
+        $texto .= "</div>";
         return $texto;
     }
 }

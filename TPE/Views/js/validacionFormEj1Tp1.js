@@ -14,6 +14,5 @@ function validarForm() {
         }
         num.classList.add("is-valid");
     }
-    alert(exito);
     return exito;
 }

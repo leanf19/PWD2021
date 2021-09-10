@@ -19,17 +19,23 @@ class verificaPass
             if (array_key_exists($usuario, $arrayUsuarios)) {
                 $pass = $arrayUsuarios[$usuario];
                 if ($contra == $pass) {
-                    $texto = "<h3 class='h3'> Credenciales correctas! BIENVENIDO! </h3>";
+                    $texto = "<div class='alert alert-success' role='alert'>
+  <h4 class='alert-heading'>Credenciales correctas!</h4>
+  <p>Se ha logueado correctamente.</p></div>";
                 } else {
-                    $texto = "<h3 class='h3'> ¡CREDENCIALES INCORRECTAS! Intente nuevamente  </h3>";
+                    $texto = "<div class='alert alert-danger' role='alert'>
+  <h4 class='alert-heading'>Credenciales incorrectas!</h4>
+  <p>Intentelo nuevamente.</p></div>";
                 }
             } else {
-                $texto = "<h3 class='h3'> ¡CREDENCIALES INCORRECTAS! Intente nuevamente  </h3>";
+                $texto = "<div class='alert alert-danger' role='alert'>
+  <h4 class='alert-heading'>Credenciales incorrectas!</h4>
+  <p>Intentelo nuevamente.</p></div>";
             }
 
 
         } else {
-            $texto = "<h3 class='h3'> No hay datos para visualizar </h3>";
+            $texto = "<h3 class='h3'> Datos inválidos </h3>";
 
         }
         return $texto;

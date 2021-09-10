@@ -5,11 +5,6 @@ function validacion() {
     var edad = $('#edad')[0];
     var direccion = $('#direccion')[0];
 
-
-    exito = true;
-    var useer = $('#nombre')[0];
-    var pasw = $('#password')[0];
-
     //nombre
     if (nombre.value === "") {
         if (nombre.classList.contains("is-valid")) {
@@ -50,13 +45,13 @@ function validacion() {
         direccion.classList.add("is-valid");
     }
     //edad
-    if (edad.value <=0) {
+    if (edad.value <= 0) {
         if (edad.classList.contains("is-valid")) {
             edad.classList.remove("is-valid");
         }
         edad.classList.add("is-invalid");
         exito = false;
-    }else {
+    } else {
         if (edad.classList.contains("is-invalid")) {
             edad.classList.remove("is-invalid");
         }

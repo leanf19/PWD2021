@@ -31,7 +31,7 @@ class ej5Controller
                     $texto .= "<br><h4 class='h4'>Soy hombre";
                     break;
                 case "x":
-                    $texto .= "<br><h4 class='h4'>Soy binario";
+                    $texto .= "<br><h4 class='h4'>Soy no binario";
                     break;
             }
 

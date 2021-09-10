@@ -12,28 +12,33 @@ class ej8Controller
             $tarifa = "";
 
             if ($edad != "") {
-                switch ($estudios) {
-                    case "Si":
-                    {
-                        if ($edad > 11) {
-                            $tarifa = 180;
-                        } else {
-                            $tarifa = 160;
+                if ($edad > 0) {
+                    switch ($estudios) {
+                        case "Si":
+                        {
+                            if ($edad > 11) {
+                                $tarifa = 180;
+                            } else {
+                                $tarifa = 160;
+                            }
+                            break;
                         }
-                        break;
-                    }
-                    case "No":
-                    {
-                        if ($edad > 11) {
-                            $tarifa = 300;
-                        } else {
-                            $tarifa = 160;
+                        case "No":
+                        {
+                            if ($edad > 11) {
+                                $tarifa = 300;
+                            } else {
+                                $tarifa = 160;
+                            }
+                            break;
                         }
-                        break;
+
                     }
+                    $texto = "<h3 class='h3'>Su tarifa es de $$tarifa</h3>";
+                } else {
+                    $texto = "<h3 class='h3'> Datos invalidos </h3>";
 
                 }
-                $texto = "<h3 class='h3'>Su tarifa es de $$tarifa</h3>";
             }
 
         } else {
