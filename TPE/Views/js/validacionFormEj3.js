@@ -31,6 +31,5 @@ function validacion() {
         }
         psw.classList.add("is-valid");
     }
-    alert(exito)
     return exito;
 };

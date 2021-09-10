@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <title>TP2 - EJ4</title>
+    <title>TP3 - EJ3</title>
 </head>
 <body>
 <?php
@@ -13,7 +13,7 @@ include_once "../Header.php";
 ?>
 
 <div class="container p-4">
-    <form id="registro" name="registro" method="post" action="Ej4-res.php"
+    <form id="registro" name="registro" method="post" action="Ej3-res.php" enctype="multipart/form-data"
           onsubmit="return validacion();" novalidate>
         <div class="row p-2">
             <div class="form-group col-6">
@@ -104,12 +104,17 @@ include_once "../Header.php";
             <textarea id="sinopsis" name="sinopsis" cols="40" rows="4" class="form-control" required></textarea>
             <div class="invalid-feedback">Ingrese un nombre</div>
         </div>
+        <div class="col-12">
+            <label for="archivo"> Cargar imagen pelicula: </label>
+            <input type="file" name="portada" id="portada">
+            <input type="submit" value="Subir" name="submit">
+        </div>
         <div class="row p-1 justify-content-end">
             <div class="form-group col-1">
                 <button name="submit" type="submit" class="btn btn-primary">Enviar</button>
             </div>
             <div class="form-group col-1">
-                <button name="borrar" type="reset" class="btn btn-light">Borrar</button>
+                <button name="borrar" type="reset" onclick="reset();" class="btn btn-light">Borrar</button>
             </div>
         </div>
     </form>

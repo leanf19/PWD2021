@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <title>TP2 - EJ4</title>
+    <title>TP3 - EJ3</title>
 </head>
 <body>
 <?php
 include_once "../Header.php";
-include_once "../../../Controllers/verificaCinema.php";
+include_once "../../../Controllers/verificaCinemaImagen.php";
 
-$controller = new verificaCinema();
+$controller = new verificaCinemaImagen();
 if (!empty($_POST))
     $resp = $controller->verificarDatos($_POST);
+if (!empty($_FILES))
+    $respImg = $controller->cargaImg($_FILES);
+
+
 ?>
 
 <div class="container">
     <?php
-    echo "<div>{$resp}</div>";
+
+    $etiquetaImg = "";
+    if (isset($respImg)) {
+        $etiquetaImg = "<div class='container col-2'><img src='../../files/img/{$respImg}'></div>";
+    }
+    echo "<div class='row p-5'>{$resp}{$etiquetaImg}
+    </div>";
+
     ?>
 </div>
 

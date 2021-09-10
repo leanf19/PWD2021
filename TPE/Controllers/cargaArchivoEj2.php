@@ -4,11 +4,11 @@ class cargaArchivoEj2
 {
     function cargaArchivotxt($datos)
     {
-        $dir = $_SERVER["DOCUMENT_ROOT"] . "/PWD/PWD2021/TPE/Views/files/";
+        $dir = $_SERVER["DOCUMENT_ROOT"] . "/PWD/TPE/Views/files/";
         $archivo = $dir . basename($datos["archivo"]["name"]);
         $uploadOk = 1;
         $extensionArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
-
+        var_dump($datos["archivo"]);
         // Check de formato
         if ($extensionArchivo != "txt") {
             $texto = "El archivo ingresado tiene un formato incorrecto.";
