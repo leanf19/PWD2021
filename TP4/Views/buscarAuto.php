@@ -14,7 +14,7 @@ include_once("structure/Header.php");
                 <div class="invalid-feedback">Debe incresar una patente</div>
             </div>
             <div class="d-grid">
-                <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                <button class="btn btn-primary" id="submitButton" type="submit">Submit</button>
             </div>
         </form>
     </div>

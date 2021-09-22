@@ -2,7 +2,7 @@
 
 class ControllerAuto
 {
-    public function AltaAuto($Patente, $Marca, $Modelo, $DniDuenio)
+    public static function AltaAuto($Patente, $Marca, $Modelo, $DniDuenio)
     {
         $autoTemp = new Auto();
         $autoTemp->setear($Patente, $Marca, $Modelo, $DniDuenio);
@@ -13,7 +13,7 @@ class ControllerAuto
 
     }
 
-    public function BajaAuto($Patente)
+    public static function BajaAuto($Patente)
     {
         $autoTemp = new Auto();
         $autoTemp->setPatente($Patente);
@@ -23,7 +23,7 @@ class ControllerAuto
         }
     }
 
-    public function ModificarAuto($Patente, $Marca, $Modelo, $DniDuenio)
+    public static function ModificarAuto($Patente, $Marca, $Modelo, $DniDuenio)
     {
         $autoTemp = new Auto();
         $autoTemp->setPatente($Patente);
@@ -34,17 +34,22 @@ class ControllerAuto
         }
     }
 
-    public function ListarAutos()
+    public static function ListarAutos()
     {
         $arr = Auto::listar();
 
         return $arr;
     }
 
-    public function ListarAutosDni($DniDuenio)
+    public static function ListarAutosDni($DniDuenio)
     {
         $arr = Auto::listar("DniDuenio = {$DniDuenio}");
 
         return $arr;
     }
+
+    function buscarAuto(){
+
+    }
+
 }
