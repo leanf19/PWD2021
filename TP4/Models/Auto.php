@@ -6,7 +6,7 @@ class Auto
     private $Patente;
     private $Marca;
     private $Modelo;
-    private $DniDuenio;
+    private $duenio;
     private $mensajeoperacion;
 
 
@@ -16,7 +16,7 @@ class Auto
         $this->Patente = "";
         $this->Marca = "";
         $this->Modelo = -1;
-        $this->DniDuenio = "";
+        $this->duenio = new Persona();
     }
 
     public function setear($Patente, $Marca, $Modelo, $DniDuenio)
@@ -66,12 +66,13 @@ class Auto
 
     public function getDniDuenio()
     {
-        return $this->DniDuenio;
+        return $this->duenio;
     }
 
-    public function setDniDuenio($DniDuenio)
+    public function setDuenio($DniDuenio)
     {
-        $this->DniDuenio = $DniDuenio;
+        $this->duenio = $this->getDniDuenio()->setNroDni($DniDuenio);
+        $this->getDniDuenio()->cargar();
 
         return $this;
     }
@@ -92,13 +93,14 @@ class Auto
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "SELECT * FROM auto WHERE Patente = " . $this->getPatente();
+        $sql = "SELECT * FROM auto WHERE Patente = '{$this->getPatente()}'";
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if ($res > -1) {
                 if ($res > 0) {
                     $row = $base->Registro();
                     $this->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']);
+                    $resp = true;
                 }
             }
         } else {
@@ -183,5 +185,15 @@ class Auto
         }
         return $arreglo;
     }
+
+    function getDatos()
+    {
+        $arr = ["patente" => $this->getPatente(),
+            "marca" => $this->getMarca(),
+            "modelo" => $this->getModelo(),
+            "dniDuenio" => $this->getDniDuenio()];
+        return $arr;
+    }
+
 
 }

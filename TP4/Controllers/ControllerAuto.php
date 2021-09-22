@@ -1,5 +1,7 @@
 <?php
 
+include_once(__DIR__ . "/../Models/Auto.php");
+
 class ControllerAuto
 {
     public static function AltaAuto($Patente, $Marca, $Modelo, $DniDuenio)
@@ -48,8 +50,17 @@ class ControllerAuto
         return $arr;
     }
 
-    function buscarAuto(){
+    function buscarAuto($datos)
+    {
+        $patente = $datos['patente'];
+        $autoTemp = new Auto();
+        $arrResp = array();
 
+        $autoTemp->setPatente($patente);
+        if ($autoTemp->cargar()) {
+            $arrResp = $autoTemp->getDatos();
+        }
+        return $arrResp;
     }
 
 }

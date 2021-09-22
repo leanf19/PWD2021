@@ -9,7 +9,7 @@ include_once("structure/Header.php");
         <form id="patenteForm" name="patenteForm" method="post" action="action/buscarAutoAction.php"
               onsubmit="return validarPatente();" novalidate>
             <div class="form-floating mb-3">
-                <input class="form-control" id="patente" type="text" placeholder="Patente" required>
+                <input class="form-control" id="patente" name="patente" type="text" placeholder="Patente" required>
                 <label for="patente">Patente</label>
                 <div class="invalid-feedback">Debe incresar una patente</div>
             </div>
