@@ -48,3 +48,6 @@
     </nav>
     <!-- Navbar -->
 </header>
+<?php
+    include_once("../../Tools/functions.php");
+?>
