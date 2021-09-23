@@ -48,17 +48,26 @@ class ControllerPersona
         return self::AltaPersona($datos["dni"], $datos["apellido"], $datos["nombre"], $datos["fechaDeNacimiento"], $datos["telefono"], $datos["domicilio"]);
     }
 
-    function buscarPersona($datos)
+    static function buscarPersona($datos)
     {
-        $patente = $datos['NroDni'];
+        $dni = $datos['dni'];
         $PersonaTemp = new Persona();
-        $arrResp = array();
+        $PersonaTemp->setNroDni($dni);
 
-        $PersonaTemp->setPatente($patente);
-        if ($PersonaTemp->cargar()) {
-            $arrResp = $PersonaTemp->getDatos();
+        if (!$PersonaTemp->cargar()) {
+            $response = null;
+        } else {
+            $response = $PersonaTemp;
         }
-        return $arrResp;
+        return $response;
+    }
+
+    static function existePersona($nroDni)
+    {
+        $tempPersona = new Persona();
+        $tempPersona->setNroDni($nroDni);
+        $response = $tempPersona->cargar();
+        return $response;
     }
 
 }

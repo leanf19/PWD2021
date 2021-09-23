@@ -8,11 +8,11 @@ class ControllerAuto
     {
         $autoTemp = new Auto();
         $autoTemp->setear($Patente, $Marca, $Modelo, $DniDuenio);
-
+        $response = false;
         if (!$autoTemp->cargar()) {
-            $autoTemp->insertar();
+            $response = $autoTemp->insertar();
         }
-
+        return $response;
     }
 
     public static function BajaAuto($Patente)
@@ -61,6 +61,11 @@ class ControllerAuto
             $arrResp = $autoTemp->getDatos();
         }
         return $arrResp;
+    }
+
+    function insertarAuto($datos)
+    {
+        return self::AltaAuto($datos["patente"], $datos["modelo"], $datos["marca"], $datos["dni"]);
     }
 
 }

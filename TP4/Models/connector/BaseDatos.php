@@ -20,7 +20,7 @@ class BaseDatos extends PDO
         $this->database = 'infoautos';
         $this->user = 'root';
         $this->pass = '';
-        $this->debug = false;
+        $this->debug = true;
         $this->error = "";
         $this->sql = "";
         $this->indice = 0;
