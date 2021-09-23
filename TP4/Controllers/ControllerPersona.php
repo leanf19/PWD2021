@@ -62,11 +62,14 @@ class ControllerPersona
         return $response;
     }
 
-    static function existePersona($nroDni)
+    static function existePersona($datos)
     {
         $tempPersona = new Persona();
-        $tempPersona->setNroDni($nroDni);
-        $response = $tempPersona->cargar();
+        $response = false;
+        if ($datos['dni'] !== null) {
+            $tempPersona->setNroDni($datos['dni']);
+            $response = $tempPersona->cargar();
+        }
         return $response;
     }
 

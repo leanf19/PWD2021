@@ -128,6 +128,7 @@ class Persona
                 if ($res > 0) {
                     $row = $base->Registro();
                     $this->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'], $row['Telefono'], $row['Domicilio']);
+                    $resp = true;
                 }
             }
         } else {
