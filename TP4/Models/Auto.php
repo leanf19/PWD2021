@@ -1,6 +1,10 @@
 <?php
 include_once 'connector/BaseDatos.php';
 include_once 'Persona.php';
+<<<<<<< HEAD
+=======
+
+>>>>>>> a67432b8a2c55308c0c91184c28d9caa3ced9f2c
 class Auto
 {
     private $Patente;
@@ -24,7 +28,7 @@ class Auto
         $this->setPatente($Patente);
         $this->setMarca($Marca);
         $this->setModelo($Modelo);
-        $this->setDniDuenio($DniDuenio);
+        $this->setDuenio($DniDuenio);
     }
 
 
@@ -64,15 +68,15 @@ class Auto
         return $this;
     }
 
-    public function getDniDuenio()
+    public function getDuenio()
     {
         return $this->duenio;
     }
 
     public function setDuenio($DniDuenio)
     {
-        $this->duenio = $this->getDniDuenio()->setNroDni($DniDuenio);
-        $this->getDniDuenio()->cargar();
+        $this->duenio = $this->getDuenio()->setNroDni($DniDuenio);
+        $this->getDuenio()->cargar();
 
         return $this;
     }
@@ -113,7 +117,7 @@ class Auto
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "INSERT INTO auto(Patente, Marca, Modelo, DniDuenio)  VALUES('" . $this->getPatente() . "', '" . $this->getMarca() . "', '" . $this->getModelo() . "', '" . $this->getDniDuenio() . "');";
+        $sql = "INSERT INTO auto(Patente, Marca, Modelo, DniDuenio)  VALUES('" . $this->getPatente() . "', '" . $this->getMarca() . "', '" . $this->getModelo() . "', '" . $this->getDuenio()->getNroDni() . "');";
         if ($base->Iniciar()) {
             if ($elid = $base->Ejecutar($sql)) {
                 $resp = true;
@@ -130,7 +134,7 @@ class Auto
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "UPDATE auto SET Patente='" . $this->getPatente() . "', Marca='" . $this->getMarca() . "', Modelo='" . $this->getModelo() . "' WHERE DniDuenio=" . $this->getDniDuenio();
+        $sql = "UPDATE auto SET Patente='" . $this->getPatente() . "', Marca='" . $this->getMarca() . "', Modelo='" . $this->getModelo() . "' WHERE DniDuenio=" . $this->getDuenio()->getNroDni();
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
@@ -175,7 +179,7 @@ class Auto
                 while ($row = $base->Registro()) {
                     $obj = new Auto();
                     $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']);
-                    array_push($arreglo, $obj);
+                    array_push($arreglo, $obj->getDatos());
                 }
 
             }
@@ -191,9 +195,13 @@ class Auto
         $arr = ["patente" => $this->getPatente(),
             "marca" => $this->getMarca(),
             "modelo" => $this->getModelo(),
-            "dniDuenio" => $this->getDniDuenio()];
+            "duenio" => $this->getDuenio()];
         return $arr;
     }
 
+    function __toString()
+    {
+        return "{$this->getPatente()}";
+    }
 
 }
