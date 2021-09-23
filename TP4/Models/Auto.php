@@ -1,5 +1,6 @@
 <?php
 include_once 'connector/BaseDatos.php';
+include_once 'Persona.php';
 
 class Auto
 {
@@ -173,9 +174,9 @@ class Auto
             if ($res > 0) {
 
                 while ($row = $base->Registro()) {
-                    $obj = new Tabla();
+                    $obj = new Auto();
                     $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']);
-                    array_push($arreglo, $obj);
+                    array_push($arreglo, $obj->getDatos());
                 }
 
             }
@@ -195,5 +196,9 @@ class Auto
         return $arr;
     }
 
+    function __toString()
+    {
+        return "{$this->getPatente()}";
+    }
 
 }
