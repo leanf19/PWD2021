@@ -3,7 +3,7 @@ include_once("structure/Header.php");
 include_once "../Controllers/ControllerPersona.php";
 
 $datos = data_submitted();
-$obj = new ControllerPersona();
+$obj = new ControllerAuto();
 $resp = $controller->validarLogin($_POST);
 ?>
 
