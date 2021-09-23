@@ -17,13 +17,14 @@ include_once '../Models/Persona.php';
                 <?php
                     $objPersona = new Persona();
                     $listaPersonas = $objPersona->listar();
+
                     if(count($listaPersonas)>0){
                         foreach ($listaPersonas as $datos) {
                             echo '<tr align="center" valign ="bottom" > <td>'. $datos->getNroDni() . '</td>';
                             echo '<td>' . ucfirst($datos->getApellido()) . '</td>';
                             echo '<td>' .ucfirst( $datos->getNombre()) . '</td>'; 
                             #echo '<td><form method="get" action="autosPersona.php"><input type="submit" class="btn btn-dark" value="ver más" /></form></td>';
-                            echo '<td><button type="button" class="btn btn-link"><a href="autosPersona.php?dni=' . $datos->getNroDni() .'" >ver más</a></button></td>';
+                            echo '<td><button type="button" class="btn btn-link"><a href="autosPersona.php?NroDni=' . $datos->getNroDni() .'" >ver más</a></button></td>';
                         }
                     }
                 ?>

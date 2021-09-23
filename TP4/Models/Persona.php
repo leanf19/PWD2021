@@ -196,19 +196,11 @@ class Persona
             $sql .= 'WHERE ' . $parametro;
         }
         $res = $base->Ejecutar($sql);
-<<<<<<< HEAD
-        if($res>-1){
-            if($res>0){
-                
-                while ($row = $base->Registro()){
-                    $obj= new Persona();
-=======
         if ($res > -1) {
             if ($res > 0) {
 
                 while ($row = $base->Registro()) {
-                    $obj = new Tabla();
->>>>>>> a67432b8a2c55308c0c91184c28d9caa3ced9f2c
+                    $obj = new Persona();
                     $obj->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'], $row['Telefono'], $row['Domicilio']);
                     # $NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio
                     array_push($arreglo, $obj);

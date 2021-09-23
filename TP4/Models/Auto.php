@@ -1,10 +1,6 @@
 <?php
 include_once 'connector/BaseDatos.php';
 include_once 'Persona.php';
-<<<<<<< HEAD
-=======
-
->>>>>>> a67432b8a2c55308c0c91184c28d9caa3ced9f2c
 class Auto
 {
     private $Patente;
