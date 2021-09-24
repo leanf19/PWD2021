@@ -201,8 +201,9 @@ class Persona
             if ($res > 0) {
 
                 while ($row = $base->Registro()) {
-                    $obj = new Tabla();
+                    $obj = new Persona();
                     $obj->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'], $row['Telefono'], $row['Domicilio']);
+                    # $NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio
                     array_push($arreglo, $obj);
                 }
 

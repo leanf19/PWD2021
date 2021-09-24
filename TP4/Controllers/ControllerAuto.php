@@ -49,7 +49,7 @@ class ControllerAuto
 
         return $arr;
     }
-
+    /***
     function buscarAuto($datos)
     {
         $patente = $datos['patente'];
@@ -61,6 +61,23 @@ class ControllerAuto
             $arrResp = $autoTemp->getDatos();
         }
         return $arrResp;
+    }
+    **/
+    function buscarAuto($param)
+    {
+        $where = " true ";
+        if ($param<>NULL){
+            if  (isset($param['Patente']))
+                $where.=" and Patente =".$param['Patente'];
+            if  (isset($param['Marca']))
+                $where.=" and Marca =".$param['Marca'];
+            if  (isset($param['Modelo']))
+                 $where.=" and Modelo ='".$param['Modelo']."'";
+            if  (isset($param['NroDni']))
+                 $where.=" and DniDuenio ='".$param['NroDni']."'";
+        }
+        $arreglo = Auto::listar($where); 
+        return $arreglo;
     }
 
     function insertarAuto($datos)

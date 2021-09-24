@@ -1,7 +1,6 @@
 <?php
 include_once 'connector/BaseDatos.php';
 include_once 'Persona.php';
-
 class Auto
 {
     private $Patente;
