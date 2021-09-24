@@ -1,6 +1,7 @@
 <?php
 
-class BaseDatos extends PDO {
+class BaseDatos extends PDO
+{
 
     private $engine;
     private $host;
@@ -17,8 +18,8 @@ class BaseDatos extends PDO {
         $this->engine = 'mysql';
         $this->host = 'localhost';
         $this->database = 'infoautos';
-        $this->user = 'phpmyadmin';
-        $this->pass = 'phpmyadmin';
+        $this->user = 'root';
+        $this->pass = '';
         $this->debug = true;
         $this->error = "";
         $this->sql = "";

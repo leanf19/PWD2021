@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afb9cd73-6011-4d9b-9b95-ef23c0f51d1e" name="Changes" comment="Final revision">
+      <change beforePath="$PROJECT_DIR$/TP4/Views/buscarAuto.php" beforeDir="false" afterPath="$PROJECT_DIR$/TP4/Views/buscarAuto.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1xVVotzh5ean0fMQoi4dr7NShlc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TPCorrecion" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Xampp\htdocs\PWD\TPE\Controllers" />
+      <recent name="D:\Xampp\htdocs\PWD\TPE\Views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Xampp\htdocs\PWD\TPE\Views\" />
+      <recent name="D:\Xampp\htdocs\PWD\TP1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afb9cd73-6011-4d9b-9b95-ef23c0f51d1e" name="Changes" comment="" />
+      <created>1630440420881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630440420881</updated>
+      <workItem from="1630440422194" duration="2587000" />
+      <workItem from="1630704531253" duration="2383000" />
+      <workItem from="1630707020634" duration="227000" />
+      <workItem from="1630764003212" duration="6009000" />
+      <workItem from="1630778845139" duration="7649000" />
+      <workItem from="1630813887324" duration="4284000" />
+      <workItem from="1630969113781" duration="2668000" />
+      <workItem from="1631050169407" duration="7753000" />
+      <workItem from="1631137359330" duration="8168000" />
+      <workItem from="1631213315042" duration="21334000" />
+      <workItem from="1631240705519" duration="68000" />
+      <workItem from="1631240787190" duration="12522000" />
+      <workItem from="1631385362147" duration="26000" />
+      <workItem from="1631822196747" duration="18000" />
+      <workItem from="1632346331558" duration="512000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add logic">
+      <created>1630770238047</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630770238047</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding Ej3">
+      <created>1630785966191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630785966191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adding Ej2">
+      <created>1630787093563</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630787093563</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding bootstrap library">
+      <created>1630787229038</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630787229038</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adding bootstrap library">
+      <created>1630787438362</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630787438362</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Minor fixes">
+      <created>1630787782399</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630787782399</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding Ej4 to Ej6">
+      <created>1630818189980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630818189980</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adding TP2">
+      <created>1631051464265</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631051464265</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding TP2">
+      <created>1631057608379</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631057608379</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adding TP3">
+      <created>1631143168802</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1631143168802</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adding js TP2">
+      <created>1631144844954</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1631144844954</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix tp3">
+      <created>1631214022082</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631214022082</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix tp3">
+      <created>1631234239727</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1631234239727</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Final revision">
+      <created>1631252576170</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1631252576170</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added logic" />
+    <MESSAGE value="Add logic" />
+    <MESSAGE value="Adding Ej3" />
+    <MESSAGE value="Adding Ej2" />
+    <MESSAGE value="Adding bootstrap library" />
+    <MESSAGE value="Minor fixes" />
+    <MESSAGE value="Adding Ej4 to Ej6" />
+    <MESSAGE value="Adding TP2" />
+    <MESSAGE value="Adding TP3" />
+    <MESSAGE value="Adding js TP2" />
+    <MESSAGE value="Fix tp3" />
+    <MESSAGE value="Final revision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final revision" />
+  </component>
+</project>

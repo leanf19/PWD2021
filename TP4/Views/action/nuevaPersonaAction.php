@@ -4,8 +4,11 @@ include_once("../../Controllers/ControllerPersona.php");
 
 $controller = new ControllerPersona();
 $response = false;
-if (!empty($_POST)) {
-    $response = $controller->insertarPersona($_POST);
+
+$datos = data_submitted();
+if (!empty($datos)) {
+    $response = $controller->insertarPersona($datos);
+    var_dump($response);
 }
 
 ?>

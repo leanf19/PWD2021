@@ -9,7 +9,8 @@ include_once("structure/Header.php");
         <form id="formPersona" name="formPersona" method="post" action="action/nuevaPersonaAction.php"
               onsubmit="return validarPersona();" novalidate>
             <div class="form-floating mb-3">
-                <input class="form-control" id="dni" name="dni" type="text" placeholder="DNI" required>
+                <input class="form-control" id="dni" name="dni" type="number" maxlength="8" minlength="7"
+                       placeholder="DNI" required>
                 <label for="dni">DNI</label>
                 <div class="invalid-feedback">Ingrese DNI sin puntos.</div>
             </div>
@@ -24,13 +25,13 @@ include_once("structure/Header.php");
                 <div class="invalid-feedback">Ingrese un nombre válido</div>
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento" type="text"
+                <input class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento" type="date"
                        placeholder="Fecha de nacimiento" required>
                 <label for="fechaDeNacimiento">Fecha de nacimiento</label>
                 <div class="invalid-feedback">Se requiere que ingrese una fecha de nacimiento válida</div>
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="telefono" name="telefono" type="text" placeholder="Teléfono" required>
+                <input class="form-control" id="telefono" name="telefono" type="number" placeholder="Teléfono" required>
                 <label for="telefono">Teléfono</label>
                 <div class="invalid-feedback">Ingrese un teléfono válido</div>
             </div>

@@ -4,8 +4,10 @@ include_once("../../Controllers/ControllerAuto.php");
 
 $controller = new ControllerAuto();
 $response = array();
-if (!empty($_POST)) {
-    $response = $controller->buscarAuto($_POST);
+$datos = data_submitted();
+if (!empty($datos)) {
+    $response = $controller->buscarAuto($datos);
+    var_dump($response);
 }
 
 ?>
@@ -15,19 +17,26 @@ if (!empty($_POST)) {
     if (!empty($response)) {
         echo "<table class='table'>
         <thead class='table-dark'>
-        <tr>";
-        foreach ($response as $key => $value) {
-            echo "<th scope='col'>{$key}</th>";
-        }
-        echo "</tr>
+        <tr>
+        <th scope='col'>Patente</th>
+        <th scope='col'>Modelo</th>
+        <th scope='col'>Marca</th>
+        <th scope='col'>Dueño</th>
+        </tr>
+        
         </thead>
         <tbody>";
         foreach ($response as $field) {
-            echo "<td>{$field}</td>";
+            echo "<tr>";
+            echo "<th scope='row'>{$field['patente']}</th>";
+            echo "<td>{$field['modelo']}</td>";
+            echo "<td>{$field['marca']}</td>";
+            echo "<td>{$field['duenio']}</td>";
+            echo "</tr>";
         }
         echo "</tbody></table>";
     } else {
-        echo "<div class='alert alert-info' role='alert'>¡No hay autos registrados con esa patente!</div>";
+        echo "<div class='alert alert-info' role='alert'>¡No hay autos registrados!</div>";
     }
     ?>
 

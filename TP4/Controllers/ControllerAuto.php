@@ -49,34 +49,35 @@ class ControllerAuto
 
         return $arr;
     }
-    /***
-    function buscarAuto($datos)
-    {
-        $patente = $datos['patente'];
-        $autoTemp = new Auto();
-        $arrResp = array();
 
-        $autoTemp->setPatente($patente);
-        if ($autoTemp->cargar()) {
-            $arrResp = $autoTemp->getDatos();
-        }
-        return $arrResp;
-    }
-    **/
+    /***
+     * function buscarAuto($datos)
+     * {
+     * $patente = $datos['patente'];
+     * $autoTemp = new Auto();
+     * $arrResp = array();
+     *
+     * $autoTemp->setPatente($patente);
+     * if ($autoTemp->cargar()) {
+     * $arrResp = $autoTemp->getDatos();
+     * }
+     * return $arrResp;
+     * }
+     **/
     function buscarAuto($param)
     {
         $where = " true ";
-        if ($param<>NULL){
-            if  (isset($param['Patente']))
-                $where.=" and Patente =".$param['Patente'];
-            if  (isset($param['Marca']))
-                $where.=" and Marca =".$param['Marca'];
-            if  (isset($param['Modelo']))
-                 $where.=" and Modelo ='".$param['Modelo']."'";
-            if  (isset($param['NroDni']))
-                 $where.=" and DniDuenio ='".$param['NroDni']."'";
+        if ($param <> NULL) {
+            if (isset($param['patente']))
+                $where .= " and Patente = '" . $param['patente'] . "'";
+            if (isset($param['marca']))
+                $where .= " and Marca = '" . $param['marca'] . "'";
+            if (isset($param['modelo']))
+                $where .= " and Modelo ='" . $param['modelo'] . "'";
+            if (isset($param['dni']))
+                $where .= " and DniDuenio ='" . $param['dni'] . "'";
         }
-        $arreglo = Auto::listar($where); 
+        $arreglo = Auto::listar($where);
         return $arreglo;
     }
 
