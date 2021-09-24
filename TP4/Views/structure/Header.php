@@ -31,16 +31,28 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">TP4</a>
+                        <a class="nav-link" aria-current="page" href="">TP4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Buscar Autos</a>
+                        <a class="nav-link" href="verAutos.php">Ver autos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Buscar</a>
+                        <a class="nav-link" href="buscarAuto.php">Buscar Auto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ASDF</a>
+                        <a class="nav-link" href="listaPersonas.php">Lista Personas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nuevaPersona.php">Nueva persona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nuevoAuto.php">Nuevo Auto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cambioDuenio.php">Cambio Dueño</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buscarPersona.html">Buscar Persona</a>
                     </li>
                 </ul>
             </div>
