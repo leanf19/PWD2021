@@ -1,0 +1,5 @@
+function buscarPersona() {
+    alert("Llego");
+    
+    
+}
