@@ -28,7 +28,7 @@ if (!empty($datos)) {
         <h4 class=''><i class=''></i> Datos Personales</h4>
     </div>
     <div>
-    <form id='actualizar' name='actualizar' method='post' action='../actualizarDatosPersona.php'>
+    <form id='actualizar' name='actualizar' method='post' action='../actualizarDatosPersona.php' onSubmit='return validarPersona();' novalidate>
         <div class='row p-2'>
             <div class='form-group col-3'>
                 <label for='NroDni'>DNI</label>
@@ -73,7 +73,8 @@ if (!empty($datos)) {
             <button class='btn btn-primary bg-dark col-1' type='button' onclick='window.history.back()'>Volver</button>
         </div>
     </form>
-    </div>";
+    </div>
+    <script src='../js/validaciones.js' type='application/javascript'></script>";
     } else {
         echo "<div class='alert alert-info' role='alert'>¡No hay personas registrados con ese DNI!</div>";
     }
