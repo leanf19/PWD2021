@@ -1,4 +1,4 @@
-<footer class="bg-dark text-center fixed-bottom">
+<footer class="bg-dark text-center fixed-bottom"> 
     <div class="text-center p-4 text-light">
         <div class="row">
             <h6>

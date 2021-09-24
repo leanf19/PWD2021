@@ -23,7 +23,7 @@ class ControllerPersona
             $persTemp->eliminar();
         }
     }
-
+    /*** 
     public static function ModificarPersona($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio)
     {
         $persTemp = new Persona();
@@ -34,6 +34,35 @@ class ControllerPersona
             $persTemp->modificar();
         }
     }
+    **/
+    private function cargarObjeto($param){
+        $obj = null;
+           
+        if( array_key_exists('NroDni',$param) and array_key_exists('apellido',$param) and array_key_exists('nombre',$param) and array_key_exists('fechaNac',$param) and array_key_exists('telefono',$param) and array_key_exists('domicilio',$param)){
+            $obj = new Persona();
+            # $obj->setear($param['NroDni'], $param['Apellido'], $param['Nombre'], $param['fechaNac'], $param['Telefono'], $param['Domicilio']);
+            $obj->setear($param['NroDni'], $param['apellido'], $param['nombre'], $param['fechaNac'], $param['telefono'], $param['domicilio']);
+            # setear($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio)
+        }
+        return $obj;
+    }
+    private function seteadosCamposDNI($param){
+        $resp = false;
+        if (isset($param['NroDni']))
+            $resp = true;
+        return $resp;
+    }
+    public function modificarPersona($param){
+        $resp = false;
+        if ($this->seteadosCamposDNI($param)){
+            $elObjtPersona = $this->cargarObjeto($param);
+            if($elObjtPersona!=null and $elObjtPersona->modificar()){
+                $resp = true;
+            }
+        }
+        return $resp;
+    }
+
 
     public static function ListarPersonas()
     {

@@ -49,5 +49,5 @@
     <!-- Navbar -->
 </header>
 <?php
-    include_once("../Tools/functions.php");
+    include_once($_SERVER["DOCUMENT_ROOT"] . "/PWD2021/TP4/Tools/functions.php");
 ?>
