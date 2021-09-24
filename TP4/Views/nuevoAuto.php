@@ -39,7 +39,7 @@ include_once("structure/Header.php");
                 <div class="invalid-feedback">Ingrese un nombre válido</div>
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento" type="text"
+                <input class="form-control" id="fechaDeNacimiento" name="fechaDeNacimiento" type="date"
                        placeholder="Fecha de nacimiento" required>
                 <label for="fechaDeNacimiento">Fecha de nacimiento</label>
                 <div class="invalid-feedback">Se requiere que ingrese una fecha de nacimiento válida</div>

@@ -7,7 +7,7 @@ include_once("structure/Header.php");
             <h3>Alta persona</h3>
         </div>
         <form id="formPersona" name="formPersona" method="post" action="action/nuevaPersonaAction.php"
-              onsubmit="return validarPersona();" novalidate>
+              onsubmit="return validarAltaPersona();" novalidate>
             <div class="form-floating mb-3">
                 <input class="form-control" id="dni" name="dni" type="number" maxlength="8" minlength="7"
                        placeholder="DNI" required>
@@ -42,12 +42,12 @@ include_once("structure/Header.php");
                 <div class="invalid-feedback">Ingrese un domicilio válido</div>
             </div>
             <div class="d-grid">
-                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button>
+                <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
             </div>
         </form>
     </div>
 
-    <script rel="script" src="js/validaciones.js"></script>
+    <script src="js/validaciones.js" type="application/javascript"></script>
 
 <?php
 include_once("structure/Footer.php");

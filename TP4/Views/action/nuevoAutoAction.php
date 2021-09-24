@@ -6,14 +6,15 @@ include_once("../../Controllers/ControllerPersona.php");
 
 $controllerAuto = new ControllerAuto();
 $controllerPersona = new ControllerPersona();
+$datos = data_submitted();
 $response = false;
 $exito = false;
-if (!empty($_POST)) {
-    if (!($existe = ControllerPersona::existePersona($_POST)))
-        $exito = $controllerPersona->insertarPersona($_POST);
+if (!empty($datos)) {
+    if (!($existe = ControllerPersona::existePersona($datos)))
+        $exito = $controllerPersona->insertarPersona($datos);
 
     if ($existe || $exito)
-        $response = $controllerAuto->insertarAuto($_POST);
+        $response = $controllerAuto->insertarAuto($datos);
 }
 
 ?>

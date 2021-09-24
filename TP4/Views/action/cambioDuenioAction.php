@@ -7,9 +7,10 @@ include_once("../../Controllers/ControllerAuto.php");
 $controller = new ControllerAuto();
 $controllerPersona = new ControllerPersona();
 $response = false;
-if (!empty($_POST)) {
-    if (ControllerPersona::existePersona($_POST)) {
-        $response = $controller->cambiarDuenio($_POST);
+$datos = data_submitted();
+if (!empty($datos)) {
+    if (ControllerPersona::existePersona($datos)) {
+        $response = $controller->cambiarDuenio($datos);
     }
 }
 

@@ -12,7 +12,7 @@
             crossorigin="anonymous"></script>
     <title>TP4 - Autos</title>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -52,7 +52,7 @@
                         <a class="nav-link" href="cambioDuenio.php">Cambio Dueño</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="buscarPersona.html">Buscar Persona</a>
+                        <a class="nav-link" href="buscarPersona.php">Buscar Persona</a>
                     </li>
                 </ul>
             </div>
@@ -61,5 +61,5 @@
     <!-- Navbar -->
 </header>
 <?php
-    include_once($_SERVER["DOCUMENT_ROOT"] . "/PWD/TP4/Tools/functions.php");
+include_once($_SERVER["DOCUMENT_ROOT"] . "/PWD/TP4/Tools/functions.php");
 ?>

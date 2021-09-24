@@ -7,7 +7,6 @@ $response = array();
 $datos = data_submitted();
 if (!empty($datos)) {
     $response = $controller->buscarAuto($datos);
-    var_dump($response);
 }
 
 ?>

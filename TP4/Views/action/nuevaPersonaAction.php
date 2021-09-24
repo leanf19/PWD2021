@@ -8,7 +8,6 @@ $response = false;
 $datos = data_submitted();
 if (!empty($datos)) {
     $response = $controller->insertarPersona($datos);
-    var_dump($response);
 }
 
 ?>

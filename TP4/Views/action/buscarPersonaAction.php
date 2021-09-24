@@ -28,7 +28,7 @@ if (!empty($datos)) {
         <h4 class=''><i class=''></i> Datos Personales</h4>
     </div>
     <div>
-    <form id='actualizar' name='actualizar' method='post' action='../actualizarDatosPersona.php' onSubmit='return validarPersona();' novalidate>
+    <form id='actualizar' name='actualizar' method='post' action='../actualizarDatosPersona.php' onsubmit='return validarPersona();' novalidate>
         <div class='row p-2'>
             <div class='form-group col-3'>
                 <label for='NroDni'>DNI</label>

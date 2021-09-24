@@ -83,7 +83,7 @@ class ControllerAuto
 
     function insertarAuto($datos)
     {
-        return self::AltaAuto($datos["patente"], $datos["modelo"], $datos["marca"], $datos["dni"]);
+        return self::AltaAuto($datos["patente"], $datos["marca"], $datos["modelo"], $datos["dni"]);
     }
 
     function cambiarDuenio($datos)
@@ -94,7 +94,6 @@ class ControllerAuto
         if ($tempAuto->cargar()) {
             $tempAuto->setDuenio($datos['dni']);
             $response = $tempAuto->modificar();
-            var_dump($response);
         }
         return $response;
     }
