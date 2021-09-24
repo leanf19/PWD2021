@@ -113,7 +113,7 @@ class Auto
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "INSERT INTO auto(Patente, Marca, Modelo, DniDuenio)  VALUES('" . $this->getPatente() . "', '" . $this->getMarca() . "', '" . $this->getModelo() . "', '" . $this->getDuenio()->getNroDni() . "');";
+        $sql = "INSERT INTO auto(Patente, Marca, Modelo, DniDuenio)  VALUES('{$this->getPatente()}','{$this->getMarca()}','{$this->getModelo()}','{$this->getDuenio()->getNroDni()}');";
         if ($base->Iniciar()) {
             if ($elid = $base->Ejecutar($sql)) {
                 $resp = true;
@@ -130,7 +130,7 @@ class Auto
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "UPDATE auto SET Patente='" . $this->getPatente() . "', Marca='" . $this->getMarca() . "', Modelo='" . $this->getModelo() . "' WHERE DniDuenio=" . $this->getDuenio()->getNroDni();
+        $sql = "UPDATE auto SET Modelo = '{$this->getModelo()}', Marca = '{$this->getMarca()}', DniDuenio = '{$this->getDuenio()->getNroDni()}' WHERE Patente = '{$this->getPatente()}'";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;

@@ -5,44 +5,62 @@ class ControllerPersona
 {
     public static function AltaPersona($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio)
     {
-        $persTemp = new Persona();
-        $persTemp->setear($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio);
-
-        if (!$persTemp->cargar()) {
-            $persTemp->insertar();
+        $PersonaTemp = new Persona();
+        $PersonaTemp->setear($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio);
+        $resp = false;
+        if (!$PersonaTemp->cargar()) {
+            $resp = $PersonaTemp->insertar();
         }
-
+        return $resp;
     }
 
     public static function BajaPersona($NroDni)
     {
-        $persTemp = new Persona();
-        $persTemp->setNroDni($NroDni);
+        $PersonaTemp = new Persona();
+        $PersonaTemp->setNroDni($NroDni);
 
-        if ($persTemp->cargar()) {
-            $persTemp->eliminar();
+        if ($PersonaTemp->cargar()) {
+            $PersonaTemp->eliminar();
         }
     }
-    /*** 
-    public static function ModificarPersona($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio)
+
+    function insertarPersona($datos)
     {
-        $persTemp = new Persona();
-        $persTemp->setNroDni($NroDni);
-
-        if ($persTemp->cargar()) {
-            $persTemp->setear($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio);
-            $persTemp->modificar();
-        }
+        return self::AltaPersona($datos["dni"], $datos["apellido"], $datos["nombre"], $datos["fechaDeNacimiento"], $datos["telefono"], $datos["domicilio"]);
     }
-    **/
+
+    static function buscarPersona($datos)
+    {
+        $dni = $datos['dni'];
+        $PersonaTemp = new Persona();
+        $PersonaTemp->setNroDni($dni);
+
+        if (!$PersonaTemp->cargar()) {
+            $response = null;
+        } else {
+            $response = $PersonaTemp;
+        }
+        return $response;
+    }
+
+    static function existePersona($datos)
+    {
+        $tempPersona = new Persona();
+        $response = false;
+        if ($datos['dni'] !== null) {
+            $tempPersona->setNroDni($datos['dni']);
+            $response = $tempPersona->cargar();
+        }
+        return $response;
+    }
+   
     private function cargarObjeto($param){
         $obj = null;
            
         if( array_key_exists('NroDni',$param) and array_key_exists('apellido',$param) and array_key_exists('nombre',$param) and array_key_exists('fechaNac',$param) and array_key_exists('telefono',$param) and array_key_exists('domicilio',$param)){
             $obj = new Persona();
-            # $obj->setear($param['NroDni'], $param['Apellido'], $param['Nombre'], $param['fechaNac'], $param['Telefono'], $param['Domicilio']);
             $obj->setear($param['NroDni'], $param['apellido'], $param['nombre'], $param['fechaNac'], $param['telefono'], $param['domicilio']);
-            # setear($NroDni, $Apellido, $Nombre, $fechaNac, $Telefono, $Domicilio)
+           
         }
         return $obj;
     }
