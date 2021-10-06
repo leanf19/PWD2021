@@ -1,5 +1,5 @@
 <?php
-include_once("structure/Header.php");
+include_once("../structure/Header.php");
 include_once("../Controllers/ControllerAuto.php");
 
 $listadoAutos = ControllerAuto::ListarAutos();
@@ -39,5 +39,5 @@ $listadoAutos = ControllerAuto::ListarAutos();
     </div>
 
 <?php
-include_once("structure/Footer.php");
+include_once("../structure/Footer.php");
 ?>

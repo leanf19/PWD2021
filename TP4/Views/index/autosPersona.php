@@ -1,5 +1,5 @@
 <?php
-include_once("structure/Header.php");
+include_once("../structure/Header.php");
 include_once "../Controllers/ControllerAuto.php";
 include_once "../Controllers/ControllerPersona.php";
 
@@ -46,5 +46,5 @@ if (isset($datos['dni'])) {
 
 
 <?php
-include_once("structure/Footer.php");
+include_once("../structure/Footer.php");
 ?>

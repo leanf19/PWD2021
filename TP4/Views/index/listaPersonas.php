@@ -1,5 +1,5 @@
 <?php
-include_once("structure/Header.php");
+include_once("../structure/Header.php");
 include_once '../Models/Persona.php';
 ?>
 
@@ -34,5 +34,5 @@ include_once '../Models/Persona.php';
 </div>
 
 <?php
-include_once("structure/Footer.php");
+include_once("../structure/Footer.php");
 ?>
