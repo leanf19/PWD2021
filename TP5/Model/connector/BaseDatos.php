@@ -18,8 +18,8 @@ class BaseDatos extends PDO
         $this->engine = 'mysql';
         $this->host = 'localhost';
         $this->database = 'bdautenticacion';
-        $this->user = 'phpmyadmin';
-        $this->pass = 'phgpmyadmin';
+        $this->user = 'root';
+        $this->pass = '';
         $this->debug = false;
         $this->error = "";
         $this->sql = "";

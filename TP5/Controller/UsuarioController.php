@@ -1,9 +1,7 @@
 <?php
 
 class UsuarioController {
-    //Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
-    
-    
+
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
      * @param array $param
@@ -12,8 +10,6 @@ class UsuarioController {
     
     public function cargarObjeto($param){
         
-        //    echo "entramos a cargar objeto";
-        print_R($param);
         $obj = null;
         
         if(array_key_exists('usnombre',$param) && array_key_exists('uspass',$param) && array_key_exists('usmail',$param)){
@@ -63,15 +59,11 @@ class UsuarioController {
      * @param array $param
      */
     public function alta($param){
-        
-        //echo "entramos a alta";
-        
+
         $resp = false;
         $elObjtUsuario = new Usuario();
         $elObjtUsuario = $this->cargarObjeto($param);
-        // verEstructura($elObjtAuto);
-        
-        // print_R($elObjtAuto);
+
         if ($elObjtUsuario!=null and $elObjtUsuario->insertar()){
             $resp = true;
         }
