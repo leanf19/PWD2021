@@ -1,5 +1,5 @@
 <?php
-include_once("structure/Header.php");
+include_once("../structure/Header.php");
 ?>
 
      <div class="container px-5 my-5">
@@ -19,5 +19,5 @@ include_once("structure/Header.php");
     </div>
     <script src="js/validaciones.js" type="application/javascript"></script>
 <?php
-include_once("structure/Footer.php");
+include_once("../structure/Footer.php");
 ?>

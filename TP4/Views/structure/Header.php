@@ -31,28 +31,28 @@
             <div class="collapse navbar-collapse" id="navbarExample01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="">TP4</a>
+                        <a class="nav-link" aria-current="page" href="../index/Index.php">TP4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="verAutos.php">Ver autos</a>
+                        <a class="nav-link" href="../index/verAutos.php">Ver autos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="buscarAuto.php">Buscar Auto</a>
+                        <a class="nav-link" href="../index/buscarAuto.php">Buscar Auto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listaPersonas.php">Lista Personas</a>
+                        <a class="nav-link" href="../index/listaPersonas.php">Lista Personas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nuevaPersona.php">Nueva persona</a>
+                        <a class="nav-link" href="../index/nuevaPersona.php">Nueva persona</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nuevoAuto.php">Nuevo Auto</a>
+                        <a class="nav-link" href="../index/nuevoAuto.php">Nuevo Auto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cambioDuenio.php">Cambio Dueño</a>
+                        <a class="nav-link" href="../index/cambioDuenio.php">Cambio Dueño</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="buscarPersona.php">Buscar Persona</a>
+                        <a class="nav-link" href="../index/buscarPersona.php">Buscar Persona</a>
                     </li>
                 </ul>
             </div>
@@ -61,5 +61,5 @@
     <!-- Navbar -->
 </header>
 <?php
-include_once($_SERVER["DOCUMENT_ROOT"] . "/PWD/TP4/Tools/functions.php");
-?>
+                include_once("../../configuracion.php");
+                ?>
