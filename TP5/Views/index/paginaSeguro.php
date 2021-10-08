@@ -1,6 +1,7 @@
 <?php
+include_once "../../config.php";
 $sesion = new Session();
-$sesion->iniciar();
+$sesion->activa();
 include_once "../structure/Header.php";
 //TODO finish login
 ?>

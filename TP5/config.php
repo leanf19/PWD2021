@@ -12,10 +12,10 @@ $ROOT = $_SERVER['DOCUMENT_ROOT'] . "/$PROYECTO/";
 include_once($ROOT . 'Util/funciones.php');
 
 // Variable que define la pagina de autenticacion del proyecto
-$INICIO = "Location:http://" . $_SERVER['HTTP_HOST'] . "/$PROYECTO/Views/Index/login.php";
+$INICIO = "Location:http://" . $_SERVER['HTTP_HOST'] . "/$PROYECTO/Views/index/login.php";
 
 // variable que define la pagina principal del proyecto (menu principal)
-$PRINCIPAL = "Location:http://" . $_SERVER['HTTP_HOST'] . "/$PROYECTO/index.php";
+$PRINCIPAL = "Location:http://" . $_SERVER['HTTP_HOST'] . "/$PROYECTO/index/index.php";
 
 
 $_SESSION['ROOT'] = $ROOT;

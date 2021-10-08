@@ -24,6 +24,7 @@ class Session
                 $psw = $_SESSION['uspass'];
                 $usuario = new UsuarioController();
                 $lista = $usuario->buscar($_SESSION);
+                var_dump($lista);
                 if ($lista != null) {
                     $_SESSION['activa'] = true;
                     $resp = true;
