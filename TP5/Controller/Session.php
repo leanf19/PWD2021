@@ -18,13 +18,17 @@ class Session
 
     public function validar()
     {
-        //TODO: md5 on password and check if unabled
         $resp = false;
-        $user = new UsuarioController();
-
-        $lista = $user->buscar($_SESSION);
-        if ($lista != null) {
-            $resp = true;
+        if (isset($_SESSION['usnombre'])) {
+            if (isset($_SESSION['uspass'])) {
+                $psw = $_SESSION['uspass'];
+                $usuario = new UsuarioController();
+                $lista = $usuario->buscar($_SESSION);
+                if ($lista != null) {
+                    $_SESSION['activa'] = true;
+                    $resp = true;
+                }
+            }
         }
         return $resp;
     }
@@ -44,8 +48,6 @@ class Session
         if ($this->validar() && $this->activa()) {
             $user = new UsuarioController();
             $lista = $user->buscar($_SESSION);
-
-
             $loggedUser = $lista[0];
         }
         return $loggedUser;
