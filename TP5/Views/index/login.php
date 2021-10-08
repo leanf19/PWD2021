@@ -1,4 +1,10 @@
 <?php
+include_once "../../config.php";
+$sesion = new Session();
+if ($sesion->activa()) {
+    header('Location: paginaSeguro.php');
+    exit();
+}
 include_once "../structure/Header.php";
 ?>
     <div class="container p-5">

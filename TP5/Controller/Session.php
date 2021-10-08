@@ -21,10 +21,8 @@ class Session
         $resp = false;
         if (isset($_SESSION['usnombre'])) {
             if (isset($_SESSION['uspass'])) {
-                $psw = $_SESSION['uspass'];
                 $usuario = new UsuarioController();
                 $lista = $usuario->buscar($_SESSION);
-                var_dump($lista);
                 if ($lista != null) {
                     $_SESSION['activa'] = true;
                     $resp = true;
@@ -37,8 +35,8 @@ class Session
     public function activa()
     {
         $resp = false;
-        if (session_status() === PHP_SESSION_ACTIVE) {
-            $resp = true;
+        if (isset($_SESSION['activa'])) {
+            $resp = $_SESSION['activa'];
         }
         return $resp;
     }
@@ -56,30 +54,28 @@ class Session
 
     public function getRol()
     {
+        $rol = null;
         //TODO: fix this
         if ($this->getUsuario() !== null) {
             $loggedUser = $this->getUsuario();
-            $param = array();
-            $param['idusuario'] = $loggedUser->getIdUsuario();
-            $objTransUsRol = new UsuarioRolController();
-            $lista = $objTransUsRol->buscar($param);
-            $objRol = $lista[0];
-            $param1 = array();
-            $param1['idrol'] = $objRol->getIdRol();
-            $objTransRol = new RolController();
-            $lista = $objTransRol->buscar($param1);
-            $objRol = $lista[0];
-
+            $tempSesion = array();
+            $tempSesion['idusuario'] = $loggedUser->getIdUsuario();
+            $usuarioRol = new UsuarioRolController();
+            $lista = $usuarioRol->buscar($tempSesion);
+            $objUsuarioRol = $lista[0];
+            $rol = $objUsuarioRol->getObjRol();
         }
-        return $objRol;
+        return $rol;
     }
 
     public function cerrar()
     {
+        $resp = false;
         if ($this->activa()) {
             session_unset();
-            session_destroy();
+            $resp = session_destroy();
         }
+        return $resp;
     }
 }
 

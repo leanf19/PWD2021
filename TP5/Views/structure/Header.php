@@ -1,5 +1,7 @@
 <?php
 include_once("../../config.php");
+
+$userRol = $sesion->getRol();
 ?>
 
 <!doctype html>
@@ -37,6 +39,17 @@ include_once("../../config.php");
                     <li class="nav-item active">
                         <a class="nav-link" aria-current="page" href="../index/Index.php">TP5</a>
                     </li>
+                    <?php if ($sesion->activa()) {
+                        if ($userRol->getRodescripcion() == "admin") {
+                            echo "<li class='nav-item'>
+                        <a class='nav-link' aria-current='page' href='#'>Lista usuarios</a>
+                    </li>";
+                        }
+                        echo "<li class='nav-item'>
+                        <a class='nav-link' aria-current='page' href='../Accion/eliminarLogin.php'>Cerrar sesión</a>
+                    </li>";
+                    }
+                    ?>
                 </ul>
             </div>
         </div>

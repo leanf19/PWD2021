@@ -1,9 +1,11 @@
 <?php
 include_once "../../config.php";
 $sesion = new Session();
-$sesion->activa();
+if (!$sesion->activa()) {
+    header('Location: login.php');
+    exit();
+}
 include_once "../structure/Header.php";
-//TODO finish login
 ?>
     <div class="container p-5">
         <div class="alert alert-success" role="alert">
@@ -11,6 +13,9 @@ include_once "../structure/Header.php";
             $sesion->getUsuario();
             ?>! Te has loggeado correctamente.
         </div>
+        <form action="../Accion/eliminarLogin.php">
+            <input type="submit" class="btn btn-primary" value="Cerrar sesión">
+        </form>
     </div>
 
 <?php
