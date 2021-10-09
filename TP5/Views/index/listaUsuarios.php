@@ -1,9 +1,11 @@
 <?php
 include_once "../../config.php";
 $sesion = new Session();
-if (!$sesion->activa() and $sesion->getRol()->getIdRol() != 1) {
+if (!$sesion->activa()) {
     header('Location: login.php');
     exit();
+} else if ($sesion->getRol()->getIdRol() != 1) {
+    header('Location: errorAcceso.php');
 }
 
 $controller = new UsuarioController();

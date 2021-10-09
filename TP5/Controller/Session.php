@@ -13,6 +13,7 @@ class Session
     {
         $_SESSION['usnombre'] = $nombreUsuario;
         $_SESSION['uspass'] = $psw;
+        $_SESSION['activa'] = false;
     }
 
 

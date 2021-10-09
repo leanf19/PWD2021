@@ -10,7 +10,7 @@ include_once "../structure/Header.php";
     <div class="container p-5">
         <div class="alert alert-success" role="alert">
             Bienvenido <?php
-            $sesion->getUsuario();
+            echo $sesion->getUsuario()->getUsNombre();
             ?>! Te has loggeado correctamente.
         </div>
         <form action="../Accion/eliminarLogin.php">
