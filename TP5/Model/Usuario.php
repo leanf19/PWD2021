@@ -57,7 +57,7 @@ class Usuario
 
     public function getUsDeshabilitado()
     {
-        return $this->usmail;
+        return $this->usdeshabilitado;
     }
 
     public function getmensajeoperacion()
@@ -156,12 +156,14 @@ class Usuario
 
             if ($base->Ejecutar($sql)) {
                 $resp = true;
+
             } else {
                 $this->setmensajeoperacion("usuario->modificar: " . $base->getError());
             }
         } else {
             $this->setmensajeoperacion("usuario->modificar: " . $base->getError());
         }
+        var_dump($sql);
         return $resp;
     }
 

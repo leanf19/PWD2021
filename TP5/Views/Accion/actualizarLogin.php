@@ -12,7 +12,6 @@ if (!$sesion->activa()) {
 
 $datos = data_submitted();
 $datos['usdeshabilitado'] = null;
-var_dump($datos);
 
 $controller = new UsuarioController();
 $usuario = array();

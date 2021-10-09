@@ -14,6 +14,7 @@ class Session
         $_SESSION['usnombre'] = $nombreUsuario;
         $_SESSION['uspass'] = $psw;
         $_SESSION['activa'] = false;
+        $_SESSION['err'] = null;
     }
 
 
@@ -25,9 +26,17 @@ class Session
                 $usuario = new UsuarioController();
                 $lista = $usuario->buscar($_SESSION);
                 if ($lista != null) {
-                    $_SESSION['activa'] = true;
-                    $resp = true;
+                    if (is_null($lista[0]->getUsDeshabilitado())) {
+                        $_SESSION['activa'] = true;
+                        $resp = true;
+                    } else {
+                        $_SESSION['err'] = "Banned";
+                    }
+                } else {
+                    $_SESSION['err'] = "Usuario y/o nombre incorrectos";
                 }
+            } else {
+                $_SESSION['err'] = "Usuario y/o nombre incorrectos";
             }
         }
         return $resp;
@@ -67,6 +76,16 @@ class Session
             $rol = $objUsuarioRol->getObjRol();
         }
         return $rol;
+    }
+
+    public function getErr()
+    {
+        $text = null;
+        if (isset($_SESSION['err'])) {
+            $text = $_SESSION['err'];
+        }
+
+        return $text;
     }
 
     public function cerrar()

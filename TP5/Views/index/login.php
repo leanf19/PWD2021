@@ -6,6 +6,9 @@ if ($sesion->activa()) {
     exit();
 }
 include_once "../structure/Header.php";
+if (!is_null($err = $sesion->getErr())) {
+    echo "<div class='container mt-3 text-center'><div class='alert alert-danger'><h3>{$err}</h3></div></div>";
+}
 ?>
     <div class="container p-5">
         <div class="row">

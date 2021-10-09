@@ -23,8 +23,8 @@ include_once "../structure/Header.php";
                 <th scope='col' class='text-center'>Contraseña</th>
                 <th scope='col' class='text-center'>E-mail</th>
                 <th scope='col' class='text-center'>¿Deshabilitado?</th>
-                <th scope='col'></th>
-                <th scope='col'></th>
+                <th scope='col' class="text-center">Editar</th>
+                <th scope='col' class="text-center">Borrar</th>
             </tr>
             </thead>
 
@@ -37,7 +37,7 @@ include_once "../structure/Header.php";
             <td class='text-center'>{$usuario->getUsNombre()}</td>
             <td class='text-center'>{$usuario->getUsPass()}</td>
             <td class='text-center'>{$usuario->getUsMail()}</td>";
-                    if (!$usuario->getUsDeshabilitado()) {
+                    if (!is_null($usuario->getUsDeshabilitado())) {
                         echo "<td class='text-center'><i class='fas fa-check-circle'></i></td>";
                     } else {
                         echo "<td class='text-center'><i class='fas fa-times-circle'></i></td>";
@@ -49,23 +49,22 @@ include_once "../structure/Header.php";
         </td>
         </form>
         <form method='post' action='../Accion/eliminarLogin.php'>
-        <td class='text-center'>
-        <input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'>";
-
-                    if ($usuario->getUsDeshabilitado()) {
+        <td class='text-center'>";
+                    if (is_null($usuario->getUsDeshabilitado())) {
+                        echo "<input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'>";
                         echo "<i class='fas fa-ban'></i>
                         </button>
                         </td>
                         </form>
                         </tr>";
                     } else {
-                        echo "<i class='fas fa-toggle-off'></i>
+                        echo "<input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-warning' type='submit' disabled>";
+                        echo "<i class='fas fa-ban'></i>
                         </button>
                         </td>
                         </form>
                         </tr>";
                     }
-
                 }
             } else {
                 echo "<div class='alert alert-warning' role='alert'>No hay usuarios registrados.</div>";

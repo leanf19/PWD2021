@@ -5,20 +5,32 @@ if (!$sesion->activa()) {
     header('Location: login.php');
     exit();
 }
+include_once "../structure/Header.php";
 $datos = data_submitted();
-if (!empty($datos)) {
-    $controller = new UsuarioController();
-    $user = $controller->buscar($datos);
 
-    if (!is_null($user)) {
-        $user->modificar();
-        echo '<div class="container mt-5">';
-        echo '<div class="alert alert-info"><h2>Usuario {$user}</h2></div>';
-        echo '<a href="../index/login.php" class="btn btn-primary">Log In</a>';
-        echo '</div>';
-    } else {
-        echo '<div></div>';
+$controller = new UsuarioController();
+$exito = false;
+if (!empty($datos)) {
+
+    $busqueda = $controller->buscar($datos);
+    if (!empty($busqueda)) {
+        $user = $busqueda[0];
+        if ($user->getIdUsuario() != $sesion->getUsuario()->getIdUsuario()) {
+            $datos['usnombre'] = $user->getUsNombre();
+            $datos['uspass'] = $user->getUsPass();
+            $datos['usmail'] = $user->getUsMail();
+            $datos['usdeshabilitado'] = date('Y-m-d H:i:s');
+            $exito = $controller->modificacion($datos);
+        }
     }
 }
-include_once "../structure/Header.php";
+echo '<div class="container mt-5">';
+if ($exito) {
+    echo '<div class="alert alert-info"><h2>El usuario ha sido deshabilitado con éxito</h2></div>';
+    echo '<a href="../index/listaUsuarios.php" class="btn btn-primary">Volver</a>';
+} else {
+    echo '<div class="alert alert-danger" role="alert">HA OCURRIDO UN ERROR. EL USUARIO NO HA SIDO DESHABILITADO</div>';
+}
+echo '</div>';
+include_once '../structure/Footer.php';
 ?>
