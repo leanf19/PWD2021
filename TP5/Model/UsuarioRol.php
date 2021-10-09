@@ -178,7 +178,7 @@ class UsuarioRol
                     $objRol = null;
 
                     if ($row['idrol'] != null) {
-                        $objRol = new Rol();
+                        $objRol = new rol();
                         $objRol->setIdrol($row['idrol']);
                         $objRol->cargar();
                     }

@@ -43,7 +43,7 @@ $userRol = $sesion->getRol();
                     <?php if ($sesion->activa()) {
                         if ($userRol->getRodescripcion() == "admin") {
                             echo "<li class='nav-item'>
-                        <a class='nav-link' aria-current='page' href='#'>Lista usuarios</a>
+                        <a class='nav-link' aria-current='page' href='../index/listaUsuarios.php'>Lista usuarios</a>
                     </li>";
                         }
                         echo "<li class='nav-item'>

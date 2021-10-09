@@ -41,14 +41,14 @@ include_once "../structure/Header.php";
                         echo "<td class='text-center'><i class='fas fa-times-circle'></i></td>";
                     }
 
-                    echo "<form method='post' action='../Accion/actualizarLogin.php'>
+                    echo "<form method='post' action='actualizarlogin.php'>
         <td class='text-center'>
-        <input name='idUsuario' id='idUsuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'><i class='fas fa-user-edit'></i></button>
+        <input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'><i class='fas fa-user-edit'></i></button>
         </td>
         </form>
         <form method='post' action='../Accion/eliminarUser.php'>
         <td class='text-center'>
-        <input name='idUsuario' id='idUsuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'>";
+        <input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'>";
 
                     if ($usuario->getUsDeshabilitado()) {
                         echo "<i class='fas fa-ban'></i>
@@ -74,3 +74,4 @@ include_once "../structure/Header.php";
 
 <?php
 include_once "../structure/Footer.php";
+?>

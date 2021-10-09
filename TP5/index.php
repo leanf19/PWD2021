@@ -1,3 +1,3 @@
 <?php
-header('Location: Views/index/Index.php');
+header('Location: Views/index/login.php');
 ?>
