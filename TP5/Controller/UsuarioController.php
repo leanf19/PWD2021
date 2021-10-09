@@ -12,11 +12,11 @@ class UsuarioController {
         
         $obj = null;
         
-        if(array_key_exists('usnombre',$param) && array_key_exists('uspass',$param) && array_key_exists('usmail',$param)){
+        if(array_key_exists('usnombre',$param) && array_key_exists('uspass',$param) && array_key_exists('usmail',$param) && array_key_exists('usdeshabilitado',$param)){
             
             $obj = new Usuario();
             
-            $obj-> setear($param['idusuario'], $param['usnombre'], $param['uspass'], $param['usmail'], null);
+            $obj-> setear($param['idusuario'], $param['usnombre'], $param['uspass'], $param['usmail'],  $param['usdeshabilitado']);
             
         }
         return $obj;
@@ -107,7 +107,7 @@ class UsuarioController {
             
             if($elObjtUsuario !=null and $elObjtUsuario->modificar()){
                 $resp = true;
-                
+                var_dump($elObjtUsuario);
             }
         }
         return $resp;
