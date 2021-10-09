@@ -1,21 +1,28 @@
 <?php
 include_once "../../config.php";
 include_once "../../Controller/UsuarioController.php";
-/**$sesion = new Session();
-if (!$sesion->activa() and $sesion->getRol()->getIdRol() != 1) {
+
+$sesion = new Session();
+if (!$sesion->activa()) {
     header('Location: login.php');
     exit();
-}*/
+} else if ($sesion->getRol()->getIdRol() != 1) {
+    header('Location: errorAcceso.php');
+}
+
 $datos = data_submitted();
+$datos['usdeshabilitado'] = null;
 var_dump($datos);
 
-$objUser = new UsuarioController();
+$controller = new UsuarioController();
 $usuario = array();
 if(!empty($datos)){
-    $usuario = $objUser->buscar($datos['idusuario']);
-    $objUser=$usuario[0];
+//    $usuario = $controller->buscar($datos['idusuario']);
+//   $objUser = null;
+//    $objUser=$usuario[0];
+    $controller->modificacion($datos);
 }
-$objUser->modificacion($datos);
+
 
 include_once "../structure/Header.php";
 
