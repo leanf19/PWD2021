@@ -1,6 +1,6 @@
 <?php
 include_once("../structure/Header.php");
-include_once '../Models/Persona.php';
+include_once '../../Models/Persona.php';
 ?>
 
 <div class="container text-center p-5 mt-5">
