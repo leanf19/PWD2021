@@ -48,7 +48,7 @@ include_once "../structure/Header.php";
         <input name='idUsuario' id='idUsuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'><i class='fas fa-user-edit'></i></button>
         </td>
         </form>
-        <form method='post' action='../Accion/eliminarUser.php'>
+        <form method='post' action='../Accion/eliminarLogin.php'>
         <td class='text-center'>
         <input name='idUsuario' id='idUsuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'>";
 

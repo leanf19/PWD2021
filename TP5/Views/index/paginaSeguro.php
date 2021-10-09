@@ -13,7 +13,7 @@ include_once "../structure/Header.php";
             echo $sesion->getUsuario()->getUsNombre();
             ?>! Te has loggeado correctamente.
         </div>
-        <form action="../Accion/eliminarLogin.php">
+        <form action="../Accion/cerrarSesion.php">
             <input type="submit" class="btn btn-primary" value="Cerrar sesión">
         </form>
     </div>

@@ -47,7 +47,7 @@ $userRol = $sesion->getRol();
                     </li>";
                         }
                         echo "<li class='nav-item'>
-                        <a class='nav-link' aria-current='page' href='../Accion/eliminarLogin.php'>Cerrar sesión</a>
+                        <a class='nav-link' aria-current='page' href='../Accion/cerrarSesion.php'>Cerrar sesión</a>
                     </li>";
                     }
                     ?>
