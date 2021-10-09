@@ -9,19 +9,19 @@ include_once "../structure/Header.php";
 ?>
     <div class="container p-5">
         <div class="row">
-            <div class="col-md-4 offset-md-4">
-                <div class="bg-dark mt-4 p-4">
+            <div class="col-md-4 offset-md-4 ">
+                <div class="bg-primary mt-4 p-4 border rounded">
                     <form action="../Accion/verificarLogin.php" method="post" class="row g-3"
                           onsubmit="return verificarLogin();"
                           novalidate>
-                        <h4 class="text-white text-center">Member login</h4>
+                        <h4 class="text-dark text-center">Member login</h4>
                         <div class="col-12">
-                            <label class="text-white">Usuario</label>
+                            <label class="text-dark">Usuario</label>
                             <input type="text" name="usnombre" id="usnombre" class="form-control" placeholder="Usuario">
                             <div class="invalid-feedback">Ingrese un usuario</div>
                         </div>
                         <div class="col-12">
-                            <label class="text-white">Contraseña</label>
+                            <label class="text-dark">Contraseña</label>
                             <input type="password" name="uspass" id="uspass" class="form-control"
                                    placeholder="Password">
                             <div class="invalid-feedback">Ingrese una contraseña</div>

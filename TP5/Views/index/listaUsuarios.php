@@ -1,9 +1,11 @@
 <?php
 include_once "../../config.php";
 $sesion = new Session();
-if (!$sesion->activa() and $sesion->getRol()->getIdRol() != 1) {
+if (!$sesion->activa()) {
     header('Location: login.php');
     exit();
+} else if ($sesion->getRol()->getIdRol() != 1) {
+    header('Location: errorAcceso.php');
 }
 
 $controller = new UsuarioController();
@@ -46,7 +48,7 @@ include_once "../structure/Header.php";
         <input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'><i class='fas fa-user-edit'></i></button>
         </td>
         </form>
-        <form method='post' action='../Accion/eliminarUser.php'>
+        <form method='post' action='../Accion/eliminarLogin.php'>
         <td class='text-center'>
         <input name='idusuario' id='idusuario' type='hidden' value='$id'><button class='btn btn-info' type='submit'>";
 

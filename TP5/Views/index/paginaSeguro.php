@@ -10,10 +10,10 @@ include_once "../structure/Header.php";
     <div class="container p-5">
         <div class="alert alert-success" role="alert">
             Bienvenido <?php
-            $sesion->getUsuario();
+            echo $sesion->getUsuario()->getUsNombre();
             ?>! Te has loggeado correctamente.
         </div>
-        <form action="../Accion/eliminarLogin.php">
+        <form action="../Accion/cerrarSesion.php">
             <input type="submit" class="btn btn-primary" value="Cerrar sesión">
         </form>
     </div>

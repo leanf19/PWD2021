@@ -41,13 +41,13 @@ $userRol = $sesion->getRol();
                         <a class="nav-link" aria-current="page" href="../index/Index.php">TP5</a>
                     </li>
                     <?php if ($sesion->activa()) {
-                        if ($userRol->getRodescripcion() == "admin") {
+                        if ($userRol->getIdRol() == 1) {
                             echo "<li class='nav-item'>
                         <a class='nav-link' aria-current='page' href='../index/listaUsuarios.php'>Lista usuarios</a>
                     </li>";
                         }
                         echo "<li class='nav-item'>
-                        <a class='nav-link' aria-current='page' href='../Accion/eliminarLogin.php'>Cerrar sesión</a>
+                        <a class='nav-link' aria-current='page' href='../Accion/cerrarSesion.php'>Cerrar sesión</a>
                     </li>";
                     }
                     ?>
