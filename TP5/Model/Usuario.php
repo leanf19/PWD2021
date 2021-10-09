@@ -148,8 +148,8 @@ class Usuario
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "UPDATE usuario SET usnombre='" . $this->getUsNombre() . "', uspass=" . $this->getUsPass() . ", usmail='" . $this->getUsMail() . "', usdeshabilitado='" . $this->getUsDeshabilitado() . "'";
-        $sql .= " WHERE idusuario='" . $this->getIdUsuario() . "'";
+        $sql = "UPDATE usuario SET usnombre= '{$this->getUsNombre()}', uspass= '{$this->getUsPass()}', usmail='{$this->getUsMail()}', usdeshabilitado='{$this->getUsDeshabilitado()}'";
+        $sql .= " WHERE idusuario= {$this->getIdUsuario()}";
         //echo $sql;
 
         if ($base->Iniciar()) {
