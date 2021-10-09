@@ -21,7 +21,7 @@ include_once "../structure/Header.php";
         <form id="formUser" name="formUser" method="post" action="../Accion/actualizarLogin.php"
               onsubmit="return validarCambio();" novalidate>
               <div class="form-floating mb-3">
-                <input class="form-control" id="idusuario" name="idusuario" type="text" value="<?php echo $datos['idusuario'];?>" > 
+                <input class="form-control"  hidden id="idusuario" name="idusuario" type="text" value="<?php echo $datos['idusuario'];?>" >
             </div>
               
             <div class="form-floating mb-3">

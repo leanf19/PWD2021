@@ -12,17 +12,11 @@ if (!$sesion->activa()) {
 
 $datos = data_submitted();
 $datos['usdeshabilitado'] = null;
-var_dump($datos);
 
 $controller = new UsuarioController();
-$usuario = array();
 if(!empty($datos)){
-//    $usuario = $controller->buscar($datos['idusuario']);
-//   $objUser = null;
-//    $objUser=$usuario[0];
     $controller->modificacion($datos);
 }
-
 
 include_once "../structure/Header.php";
 
