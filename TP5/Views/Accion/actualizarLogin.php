@@ -14,13 +14,9 @@ $datos = data_submitted();
 $datos['usdeshabilitado'] = null;
 
 $controller = new UsuarioController();
-
-$usuario = array();
 if(!empty($datos)){
-    $datos['uspass'] = md5($datos['uspass']);
     $controller->modificacion($datos);
 }
-
 
 include_once "../structure/Header.php";
 
