@@ -14,11 +14,10 @@ $datos = data_submitted();
 $datos['usdeshabilitado'] = null;
 
 $controller = new UsuarioController();
+
 $usuario = array();
 if(!empty($datos)){
-//    $usuario = $controller->buscar($datos['idusuario']);
-//   $objUser = null;
-//    $objUser=$usuario[0];
+    $datos['uspass'] = md5($datos['uspass']);
     $controller->modificacion($datos);
 }
 
